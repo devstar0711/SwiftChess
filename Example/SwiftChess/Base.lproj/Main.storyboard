@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o9i-0S-2Up">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HEd-Os-R93">
+            <objects>
+                <navigationController id="o9i-0S-2Up" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3D-Nu-dRp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="VSy-yJ-5z8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXX-sb-TAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="507"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MenuViewController" customModule="SwiftChessExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRf-s7-H9a">
+                                <rect key="frame" x="133.5" y="264.5" width="108" height="138"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-y2-Qxm">
+                                        <rect key="frame" x="0.0" y="92" width="108" height="30"/>
+                                        <state key="normal" title="AI vs AI"/>
+                                        <connections>
+                                            <action selector="AIvsAIButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mrX-sU-WvD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEX-Ea-5Xq">
+                                        <rect key="frame" x="0.0" y="46" width="108" height="30"/>
+                                        <state key="normal" title="Player vs Player"/>
+                                        <connections>
+                                            <action selector="playerVsPlayerButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xIZ-0U-CNW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-Gf-hHc">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                        <state key="normal" title="Player vs AI"/>
+                                        <connections>
+                                            <action selector="playerVsAIButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QvL-y5-tdf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46274509800000002" green="0.71372549019999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gcM-Gf-hHc" firstAttribute="top" secondItem="KRf-s7-H9a" secondAttribute="top" id="36I-AX-c0g"/>
+                                    <constraint firstItem="fGu-y2-Qxm" firstAttribute="leading" secondItem="KRf-s7-H9a" secondAttribute="leading" id="6Ry-Rm-aC6"/>
+                                    <constraint firstAttribute="bottom" secondItem="fGu-y2-Qxm" secondAttribute="bottom" constant="16" id="Cbx-qS-jDg"/>
+                                    <constraint firstAttribute="trailing" secondItem="fGu-y2-Qxm" secondAttribute="trailing" id="Emp-tJ-X85"/>
+                                    <constraint firstAttribute="trailing" secondItem="gcM-Gf-hHc" secondAttribute="trailing" id="X1g-ke-ely"/>
+                                    <constraint firstAttribute="trailing" secondItem="kEX-Ea-5Xq" secondAttribute="trailing" id="mJN-tX-83C"/>
+                                    <constraint firstItem="kEX-Ea-5Xq" firstAttribute="top" secondItem="gcM-Gf-hHc" secondAttribute="bottom" constant="16" id="r3m-W2-Yn1"/>
+                                    <constraint firstItem="gcM-Gf-hHc" firstAttribute="leading" secondItem="KRf-s7-H9a" secondAttribute="leading" id="rbB-9u-yl8"/>
+                                    <constraint firstItem="fGu-y2-Qxm" firstAttribute="top" secondItem="kEX-Ea-5Xq" secondAttribute="bottom" constant="16" id="tUq-2B-nze"/>
+                                    <constraint firstItem="kEX-Ea-5Xq" firstAttribute="leading" secondItem="KRf-s7-H9a" secondAttribute="leading" id="vVZ-uA-Zrn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KRf-s7-H9a" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="o13-GQ-mG5"/>
+                            <constraint firstItem="KRf-s7-H9a" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="z0j-3I-4xh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kRs-c6-0Sc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="507"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="ghd-8E-pKC">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="M5V-oM-g1K" customClass="GameViewController" customModule="SwiftChessExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DBj-SB-Kkv"/>
+                        <viewControllerLayoutGuide type="bottom" id="jKx-Lu-I8i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0i2-vi-BZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnZ-Ew-a2B" customClass="BoardView" customModule="SwiftChessExample" customModuleProvider="target">
+                                <rect key="frame" x="8" y="154" width="359" height="359"/>
+                                <color key="backgroundColor" red="0.46274509800000002" green="0.71372549019999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NnZ-Ew-a2B" secondAttribute="height" multiplier="1:1" id="GNF-YV-5Vh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-mR-VXd">
+                                <rect key="frame" x="8" y="116" width="44" height="30"/>
+                                <state key="normal" title="Castle"/>
+                                <connections>
+                                    <action selector="blackKingSideCastleButtonPressedWithSender:" destination="M5V-oM-g1K" eventType="touchUpInside" id="rLk-f9-Sot"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZD-P8-Hr3">
+                                <rect key="frame" x="323" y="116" width="44" height="30"/>
+                                <state key="normal" title="Castle"/>
+                                <connections>
+                                    <action selector="blackQueenSideCastleButtonPressedWithSender:" destination="M5V-oM-g1K" eventType="touchUpInside" id="04c-Bn-Bkt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxk-YT-5FA">
+                                <rect key="frame" x="8" y="521" width="44" height="30"/>
+                                <state key="normal" title="Castle"/>
+                                <connections>
+                                    <action selector="whiteQueenSideCastleButtonPressedWithSender:" destination="M5V-oM-g1K" eventType="touchUpInside" id="3el-xi-NUE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwI-ZC-g1Z">
+                                <rect key="frame" x="323" y="521" width="44" height="30"/>
+                                <state key="normal" title="Castle"/>
+                                <connections>
+                                    <action selector="whiteKingSideCastleButtonPressedWithSender:" destination="M5V-oM-g1K" eventType="touchUpInside" id="geO-9J-0qc"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JEV-Ul-qRP">
+                                <rect key="frame" x="177.5" y="121" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NnZ-Ew-a2B" firstAttribute="top" secondItem="eZD-P8-Hr3" secondAttribute="bottom" constant="8" id="8gI-BZ-sfM"/>
+                            <constraint firstItem="Yxk-YT-5FA" firstAttribute="leading" secondItem="NnZ-Ew-a2B" secondAttribute="leading" id="BxL-mm-tSn"/>
+                            <constraint firstItem="NnZ-Ew-a2B" firstAttribute="centerY" secondItem="0i2-vi-BZ9" secondAttribute="centerY" id="DzP-fd-RxD"/>
+                            <constraint firstItem="JEV-Ul-qRP" firstAttribute="centerY" secondItem="ZZ0-mR-VXd" secondAttribute="centerY" id="LLa-vl-Dcs"/>
+                            <constraint firstItem="Yxk-YT-5FA" firstAttribute="top" secondItem="NnZ-Ew-a2B" secondAttribute="bottom" constant="8" id="N2S-Kg-2L0"/>
+                            <constraint firstItem="ZZ0-mR-VXd" firstAttribute="leading" secondItem="NnZ-Ew-a2B" secondAttribute="leading" id="NAg-kl-feP"/>
+                            <constraint firstItem="eZD-P8-Hr3" firstAttribute="trailing" secondItem="NnZ-Ew-a2B" secondAttribute="trailing" id="NYh-P9-I1j"/>
+                            <constraint firstAttribute="trailing" secondItem="NnZ-Ew-a2B" secondAttribute="trailing" constant="8" id="QWG-QI-Bkn"/>
+                            <constraint firstItem="NnZ-Ew-a2B" firstAttribute="top" secondItem="ZZ0-mR-VXd" secondAttribute="bottom" constant="8" id="TgY-3v-zy1"/>
+                            <constraint firstItem="NnZ-Ew-a2B" firstAttribute="leading" secondItem="0i2-vi-BZ9" secondAttribute="leading" constant="8" id="Ve9-Wz-Mmx"/>
+                            <constraint firstItem="FwI-ZC-g1Z" firstAttribute="top" secondItem="NnZ-Ew-a2B" secondAttribute="bottom" constant="8" id="YnW-Zf-aL2"/>
+                            <constraint firstItem="JEV-Ul-qRP" firstAttribute="centerX" secondItem="0i2-vi-BZ9" secondAttribute="centerX" id="dOc-ve-oSq"/>
+                            <constraint firstItem="FwI-ZC-g1Z" firstAttribute="trailing" secondItem="NnZ-Ew-a2B" secondAttribute="trailing" id="rx5-mS-bp0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="JEV-Ul-qRP" id="93U-eY-Z18"/>
+                        <outlet property="blackKingSideCastleButton" destination="ZZ0-mR-VXd" id="jhh-iW-CTM"/>
+                        <outlet property="blackQueenSideCastleButton" destination="eZD-P8-Hr3" id="yY5-WP-Yvk"/>
+                        <outlet property="boardView" destination="NnZ-Ew-a2B" id="qeo-BV-9YO"/>
+                        <outlet property="whiteKingSideCastleButton" destination="FwI-ZC-g1Z" id="2sV-h7-eCJ"/>
+                        <outlet property="whiteQueenSideCastleButton" destination="Yxk-YT-5FA" id="s8Z-2I-mag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhw-7l-VCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="507"/>
+        </scene>
+    </scenes>
+</document>
