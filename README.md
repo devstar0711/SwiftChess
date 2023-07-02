@@ -141,11 +141,3 @@ func promotedTypeForPawn(location: BoardLocation,
 	callback(.queen)
 }
 ```
-
-## Author
-
-Follow me on twitter [@SteveBarnegren](https://twitter.com/stevebarnegren)
-
-## License
-
-SwiftChess is available under the MIT license. See the LICENSE file for more info.
